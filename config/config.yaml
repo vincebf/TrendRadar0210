@@ -87,7 +87,7 @@ rss:
   freshness_filter:
     enabled: true                     # 是否启用新鲜度过滤（默认启用）
 
-    max_age_days: 3                   # 最大文章年龄（天）
+    max_age_days: 1                   # 最大文章年龄（天）
                                       # - 正整数：只推送 N 天内的文章
                                       # - 0：禁用过滤，推送所有文章
 
@@ -142,7 +142,7 @@ report:
                                       # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
 
 
-  display_mode: "keyword"             # 分组维度: keyword | platform
+  display_mode: "platform"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
 
