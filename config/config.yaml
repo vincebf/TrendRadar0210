@@ -57,8 +57,6 @@ platforms:
   sources:
     - id: "wallstreetcn-hot"
       name: "华尔街见闻"
-    - id: "thepaper"
-      name: "澎湃新闻"
     - id: "cls-hot"
       name: "财联社热门"
 
@@ -141,7 +139,6 @@ report:
   mode: "incremental"                     # 可选: daily | current | incremental
                                       # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
 
-
   display_mode: "platform"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
@@ -150,9 +147,7 @@ report:
   # true: 按 frequency_words.txt 中的定义顺序排列
   # false: 按匹配到的热点条数排序（条数多的在前）
   sort_by_position_first: false
-
   rank_threshold: 5                   # 排名高亮阈值
-
   max_news_per_keyword: 4             # 每个关键词最大显示数量（0=不限制）
 
 
@@ -208,9 +203,7 @@ display:
 
 # ===============================================================
 # 6. 推送通知
-#
 # ⚠️ 重要安全警告 ⚠️
-#
 # 🔴 请务必妥善保管好 webhooks，不要公开!!!
 # 🔴 如果你以 fork 的方式部署在 GitHub 上，请勿在此填写
 # 🔴 而是将 webhooks 填入 GitHub Secrets
@@ -218,9 +211,7 @@ display:
 # 🔴 否则：
 #    - 轻则：手机上收到大量垃圾广告推送
 #    - 重则：webhook 被滥用造成严重安全隐患
-#
 # 📌 多账号支持说明
-#
 # • 使用分号(;)分隔多个账号，如："url1;url2;url3"
 # • 需要配对的配置（如 Telegram 的 token 和 chat_id）数量必须一致
 # • 每个渠道最多支持 max_accounts_per_channel 个账号
@@ -314,7 +305,7 @@ storage:
   # 用于 MCP Server 等场景：爬虫存到远程，MCP 拉取到本地分析
   pull:
     enabled: false                    # 是否启用启动时自动拉取
-    days: 7                           # 拉取最近 N 天的数据
+    days: 1                           # 拉取最近 N 天的数据
 
 
 # ===============================================================
@@ -434,8 +425,6 @@ ai_analysis:
                                     # false: 使用简化格式（排名范围+时间范围+出现次数）
                                     # true: 传递完整排名变化轨迹（如 1(09:30)→2(10:00)→0(11:00)）
                                     # 启用后 AI 能更精确分析热度趋势，但会额外增加 token 消耗（0.5 倍到 1 倍）
-
-
 
 
 # ===============================================================
