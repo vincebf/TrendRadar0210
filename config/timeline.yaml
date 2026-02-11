@@ -177,9 +177,9 @@ presets:
     periods:
       evening_summary:
         name: "晚间汇总"
-        start: "20:00"
-        end: "22:00"
-        analyze: true              # 晚间做 AI 分析
+        start: "07:00"
+        end: "19:00"
+        analyze: false              # 晚间做 AI 分析
         ai_mode: "daily"           # AI 也汇总全天内容
         report_mode: "daily"       # 切换为当日全部新闻汇总
         once:
